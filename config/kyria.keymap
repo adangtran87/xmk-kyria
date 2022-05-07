@@ -132,8 +132,8 @@
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_ESC";
       #binding-cells = <0>;
-      tapping-term-ms = <150>;
-      bindings = <&sk LSHIFT>, <&kp ESC>, <&kp ESC>;
+      tapping-term-ms = <100>;
+      bindings = <&kp LSHIFT>, <&kp ESC>;
     };
     tdqwin: tap_dance_qwin {
       compatible = "zmk,behavior-tap-dance";
@@ -141,6 +141,22 @@
       #binding-cells = <0>;
       tapping-term-ms = <150>;
       bindings = <&kp Q>, <&sk MOD1>, <&sk MOD2>;
+    };
+    tlt: thumb_layer_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "THUMB_LAYER_TAP";
+      #binding-cells = <2>;
+      quick-tap-ms = <100>;
+      bindings = <&mo>, <&kp>;
+    };
+    klt: alphakey_layer_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "GLOBAL_QUICK_TAP";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <100>;
+      quick-tap-ms = <0>;
+      bindings = <&mo>, <&kp>;
     };
   };
 
@@ -151,8 +167,8 @@
       bindings = <
   &none  &tdqwin   &kp W  &kp E &kp R &kp T                                     &kp Y &kp U  &kp I   &kp O   &kp P        &none
   &none  &kp A     &kp S  &kp D &kp F &kp G                                     &kp H &kp J  &kp K   &kp L   &kp APOS     &none
-  &none  &lt NUM Z &kp X  &kp C &kp V &kp B &none &none      &none  &none       &kp N &kp M  &tdtmux &kp DOT &lt FUN FSLH &none
-                   &none &none &tdesc &lt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
+  &none  &klt NUM Z &kp X  &kp C &kp V &kp B &none &none      &none  &none      &kp N &kp M  &tdtmux &kp DOT &klt FUN FSLH &none
+                   &none &none &tdesc &tlt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
