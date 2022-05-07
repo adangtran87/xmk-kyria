@@ -132,7 +132,7 @@
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_ESC";
       #binding-cells = <0>;
-      tapping-term-ms = <100>;
+      tapping-term-ms = <150>;
       bindings = <&kp LSHIFT>, <&kp ESC>;
     };
     tdqwin: tap_dance_qwin {
@@ -156,8 +156,8 @@
       label = "ALPHAKEY_LAYER_TAP";
       #binding-cells = <2>;
       flavor = "tap-preferred";
-      tapping-term-ms = <100>;
-      quick-tap-ms = <0>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <150>;
       global-quick-tap;
       bindings = <&mo>, <&kp>;
     };
@@ -201,7 +201,7 @@
   &none  &none   &none  &none &none &none                                                  &kp KP_PLUS &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &none
   &none  &none   &none  &none &none &none                                                  &kp KP_EQUAL &kp N4 &kp N5 &kp N6 &sk MOD1 &none
   &none  &none   &none  &none &none &none  &none &none                        &none  &none &kp KP_MINUS &kp N1 &kp N2 &kp N3 &kp KP_DIVIDE &none
-                        &none &none &none  &none &none                        &none  &kp KP_DOT &kp N0 &none &none
+                        &none &none &none  &none &none                        &none  &kp DOT &kp N0 &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
