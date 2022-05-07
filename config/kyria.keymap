@@ -13,27 +13,27 @@
 #define NUM (3)
 #define FUN (4)
 
-#define MEH(x) C(S(A(x)))
-#define HYPR(x) C(S(A(G(x))))
-#define M1(x) MEH(x)
-#define M2(x) HYPR(x)
-#define MOD1 C(S(LALT))
-#define MOD2 C(S(A(LGUI)))
+#define MEH(x) LC(LS(LA((x))))
+#define HYPR(x) LC(LS(LA(LG(x))))
+#define M1(x) MEH((x))
+#define M2(x) HYPR((x))
+#define MOD1 LC(LS(LALT))
+#define MOD2 LC(LS(LA(LGUI)))
 
-#define OSX_MCL C(KC_UP)
-#define OSX_SS G(S(C(KC_4)))
+#define OSX_MCL LC(UP)
+#define OSX_SS LG(LS(LC(N4)))
 
 // Browser controls
 // new browser tab
-#define N_NEBW C(KC_T)
+#define N_NEBW LC(T)
 // old browser tab
-#define N_OLBW C(S(KC_T))
+#define N_OLBW LC(LS(T))
 // next browser
-#define N_NBWS C(KC_TAB)
+#define N_NBWS LC(TAB)
 // prev browser
-#define N_PBWS C(S(KC_TAB))
+#define N_PBWS LC(LS(TAB))
 // close browser
-#define N_CLBW C(KC_W)
+#define N_CLBW LC(W)
 
 /*
  Layout Indices
