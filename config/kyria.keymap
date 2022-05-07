@@ -110,7 +110,7 @@
           bindings = <&kp UNDER>;
       };
       combo_colon {
-          timeout-ms = <50>;
+          timeout-ms = <40>;
           key-positions = <20 21>;
           bindings = <&kp COLON>;
       };
@@ -146,6 +146,7 @@
       compatible = "zmk,behavior-hold-tap";
       label = "THUMB_LAYER_TAP";
       #binding-cells = <2>;
+      flavor = "tap-preferred";
       tapping-term-ms = <100>;
       quick-tap-ms = <100>;
       bindings = <&mo>, <&kp>;
