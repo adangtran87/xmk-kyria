@@ -54,6 +54,14 @@
     quick-release;
 };
 
+&lt {
+  quick-tap-ms = <125>;
+};
+
+&caps_word {
+  continue-list = <UNDERSCORE BSPC>;
+};
+
 / {
   combos {
       compatible = "zmk,combos";
