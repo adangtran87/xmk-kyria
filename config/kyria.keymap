@@ -147,8 +147,8 @@
       label = "THUMB_LAYER_TAP";
       #binding-cells = <2>;
       flavor = "tap-preferred";
-      tapping-term-ms = <100>;
-      quick-tap-ms = <100>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
       bindings = <&mo>, <&kp>;
     };
     klt: alphakey_layer_tap {
@@ -158,6 +158,7 @@
       flavor = "tap-preferred";
       tapping-term-ms = <100>;
       quick-tap-ms = <0>;
+      global-quick-tap;
       bindings = <&mo>, <&kp>;
     };
   };
