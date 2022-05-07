@@ -129,14 +129,14 @@
     };
     tdesc: tap_dance_esc {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_TMUX";
+      label = "TAP_DANCE_ESC";
       #binding-cells = <0>;
       tapping-term-ms = <150>;
       bindings = <&sk LSHIFT>, <&kp ESC>, <&kp ESC>;
     };
     tdqwin: tap_dance_qwin {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_TMUX";
+      label = "TAP_DANCE_QWIN";
       #binding-cells = <0>;
       tapping-term-ms = <150>;
       bindings = <&kp Q>, <&sk MOD1>, <&sk MOD2>;
