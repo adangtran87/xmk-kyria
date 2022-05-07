@@ -55,7 +55,8 @@
 };
 
 &lt {
-  quick-tap-ms = <125>;
+  tapping-term-ms = <100>;
+  quick-tap-ms = <100>;
 };
 
 &caps_word {
