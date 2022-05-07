@@ -12,6 +12,29 @@
 #define SYM (2)
 #define NUM (3)
 #define FUN (4)
+
+#define MEH(x) C(S(A(x)))
+#define HYPR(x) C(S(A(G(x))))
+#define M1(x) MEH(x)
+#define M2(x) HYPR(x)
+#define MOD1 C(S(LALT))
+#define MOD2 C(S(A(LGUI)))
+
+#define OSX_MCL C(KC_UP)
+#define OSX_SS G(S(C(KC_4)))
+
+// Browser controls
+// new browser tab
+#define N_NEBW C(KC_T)
+// old browser tab
+#define N_OLBW C(S(KC_T))
+// next browser
+#define N_NBWS C(KC_TAB)
+// prev browser
+#define N_PBWS C(S(KC_TAB))
+// close browser
+#define N_CLBW C(KC_W)
+
 /*
  Layout Indices
  Left
@@ -99,49 +122,44 @@
                         &none &none &sk LSHFT &lt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
       >;
 
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
     };
     navigation_layer {
       bindings = <
-  &none  &none   &none  &none &none &none                                                  &none &none &none &none &none &none
-  &none  &none   &none  &none &none &none                                                  &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-  &none  &kp HOME   &kp PGUP  &kp PGDN &kp END &none  &none &none                        &none  &none &none &none &none &none &none &none
+  &none  &none   &none  &none &none &none                                                &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
+  &none  &kp OSX_MCL   &kp OSX_SS  &kp M1(J) &kp M1(K) &none                             &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+  &none  &kp HOME   &kp PGUP  &kp PGDN &kp END &none  &none &none             &none  &none &kp N_CLBW &kp N_OLBW &kp N_PBWS &kp N_NBWS &kp N_NEBW &none
                         &none &none &none  &none &none                        &none  &none &none &none &none
       >;
 
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
     };
     symbol_layer {
       bindings = <
-  &none  &none   &none  &none &none &none                                                  &none &none &none &none &none &none
-  &none  &none   &none  &none &none &none                                                  &none &none &none &none &none &none
-  &none  &none   &none  &none &none &none  &none &none                        &none  &none &none &none &none &none &none &none
-                        &none &none &none  &none &none                        &none  &none &none &none &none
+  &none  &none   &none  &none &none &none                                                      &kp AMPS &kp ASTRK &kp LBKT &kp RBKT &kp PLUS &none
+  &none  &kp EXCL &kp LPAR  &kp RPAR &kp QMARK &kp TILDE                                       &kp PIPE &kp EQUAL &kp LBRC &kp RBRC &kp SEMI &none
+  &none  &kp CARET &kp GRAVE &kp HASH &kp DLLR &none  &none &none                 &none  &none &kp AT   &kp PRCNT &kp LT   &kp GT   &kp BSLH &none
+                        &none &none &kp DEL &kp BSPC &none                        &none  &none &none &none &none
       >;
 
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
     };
     number_layer {
       bindings = <
   &none  &none   &none  &none &none &none                                                  &kp KP_PLUS &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &none
-  &none  &none   &none  &none &none &none                                                  &kp KP_EQUAL &kp N4 &kp N5 &kp N6 &none &none
+  &none  &none   &none  &none &none &none                                                  &kp KP_EQUAL &kp N4 &kp N5 &kp N6 &sk MOD1 &none
   &none  &none   &none  &none &none &none  &none &none                        &none  &none &kp KP_MINUS &kp N1 &kp N2 &kp N3 &kp KP_DIVIDE &none
                         &none &none &none  &none &none                        &none  &kp KP_DOT &kp N0 &none &none
       >;
 
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
     };
     function_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
       bindings = <
   &kp F9 &kp F10 &kp F11 &kp F12 &none &none                                                  &none &none &none &none &none &none
-  &kp F5 &kp F6  &kp F7  &kp F8  &none &none                                                  &none &none &none &none &none &none
-  &kp F1 &kp F2  &kp F3  &kp F4  &none &none  &none &none                        &none  &none &none &none &none &none &none &none
-                        &none &none &none  &none &none                        &none  &none &none &none &none
+  &kp F5 &kp F6  &kp F7  &kp F8  &none &none                                                  &kp C_STOP &kp C_PREV &kp C_PP &kp C_NEXT &none &none
+  &kp F1 &kp F2  &kp F3  &kp F4  &none &none  &none &none                        &none  &none &none &none &kp C_MUTE &none &none &none
+                        &kp C_MUTE &none &none  &none &none                        &none  &none &none &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
