@@ -119,15 +119,39 @@
           bindings = <&kp MINUS>;
       };
   };
+  behaviors {
+    tdtmux: tap_dance_tmux {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_TMUX";
+      #binding-cells = <0>;
+      tapping-term-ms = <150>;
+      bindings = <&kp COMMA>, <&kp LC(A)>;
+    };
+    tdesc: tap_dance_esc {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_TMUX";
+      #binding-cells = <0>;
+      tapping-term-ms = <150>;
+      bindings = <&sk LSHIFT>, <&kp ESC>, <&kp ESC>;
+    };
+    tdqwin: tap_dance_qwin {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_TMUX";
+      #binding-cells = <0>;
+      tapping-term-ms = <150>;
+      bindings = <&kp Q>, <&sk MOD1>, <&sk MOD2>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
     qwerty_layer {
       bindings = <
-  &none  &kp Q     &kp W  &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P        &none
-  &none  &kp A     &kp S  &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp APOS     &none
-  &none  &lt NUM Z &kp X  &kp C &kp V &kp B     &none        &none        &none  &none       &kp N &kp M  &kp COMMA &kp DOT &lt FUN FSLH &none
-                        &none &none &sk LSHFT &lt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
+  &none  &tdqwin   &kp W  &kp E &kp R &kp T                                     &kp Y &kp U  &kp I   &kp O   &kp P        &none
+  &none  &kp A     &kp S  &kp D &kp F &kp G                                     &kp H &kp J  &kp K   &kp L   &kp APOS     &none
+  &none  &lt NUM Z &kp X  &kp C &kp V &kp B &none &none      &none  &none       &kp N &kp M  &tdtmux &kp DOT &lt FUN FSLH &none
+                   &none &none &tdesc &lt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
