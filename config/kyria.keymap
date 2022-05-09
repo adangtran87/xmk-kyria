@@ -173,7 +173,7 @@
   &none  &tdqwin   &kp W  &kp E &kp R &kp T                                         &kp Y &kp U  &kp I   &kp O   &kp P        &none
   &none  &kp A     &kp S  &kp D &kp F &kp G                                         &kp H &kp J  &kp K   &kp L   &kp APOS     &none
   &none  &klt NUM Z &kp X  &kp C &kp V &kp B &none &none          &none  &none      &kp N &kp M  &tdtmux &kp DOT &klt FUN FSLH &none
-                   &none &none &kp LSHIFT &tlt NAV BSPC &none     &none  &lt SYM RET &kp SPACE &none &none
+                   &none &none &kp LSHIFT &tlt NAV BSPC &none     &none  &tlt SYM RET &kp SPACE &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
