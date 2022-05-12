@@ -72,8 +72,8 @@
       compatible = "zmk,combos";
       // Both hands
       combo_esc {
-          timeout-ms = <50>;
-          key-positions = <43 46>;
+          timeout-ms = <40>;
+          key-positions = <42 47>;
           bindings = <&kp ESC>;
       };
       combo_capsword {
