@@ -73,7 +73,7 @@
       // Both hands
       combo_esc {
           timeout-ms = <50>;
-          key-positions = <42 47>;
+          key-positions = <43 46>;
           bindings = <&kp ESC>;
       };
       combo_capsword {
@@ -178,7 +178,7 @@
   &none  &none   &none  &none &none &none                                                &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
   &none  &kp OSX_MCL   &kp OSX_SS  &kp M1(J) &kp M1(K) &none                             &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
   &none  &kp HOME   &kp PGUP  &kp PGDN &kp END &none  &none &none             &none  &none &kp N_CLBW &kp N_OLBW &kp N_PBWS &kp N_NBWS &kp N_NEBW &none
-                        &none &none &none  &none &none                        &none  &none &none &none &none
+                        &none &none &none  &none &none                        &none  &kp ESC &none &none &none
       >;
 
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN >;
