@@ -161,7 +161,7 @@
       compatible = "zmk,behavior-hold-tap";
       label = "ALPHAKEY_LAYER_TAP";
       #binding-cells = <2>;
-      flavor = "tap-preferred";
+      flavor = "balanced";
       tapping-term-ms = <150>;
       quick-tap-ms = <150>;
       global-quick-tap;
