@@ -88,7 +88,7 @@
           bindings = <&sk LCTRL>;
       };
       combo_dquote {
-          timeout-ms = <50>;
+          timeout-ms = <40>;
           key-positions = <14 15>;
           bindings = <&kp DQT>;
       };
@@ -129,14 +129,14 @@
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_TMUX";
       #binding-cells = <0>;
-      tapping-term-ms = <150>;
+      tapping-term-ms = <200>;
       bindings = <&kp COMMA>, <&kp LC(A)>;
     };
     tdqwin: tap_dance_qwin {
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_QWIN";
       #binding-cells = <0>;
-      tapping-term-ms = <150>;
+      tapping-term-ms = <250>;
       bindings = <&kp Q>, <&sk MOD1>, <&sk MOD2>;
     };
     tlt: thumb_layer_tap {
@@ -175,7 +175,7 @@
     };
     navigation_layer {
       bindings = <
-  &none  &none   &none  &none &none &none                                                &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
+  &none  &none   &none  &M2(LEFT) &M2(RIGHT) &none                                       &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
   &none  &kp OSX_MCL   &kp OSX_SS  &kp M1(J) &kp M1(K) &none                             &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
   &none  &kp HOME   &kp PGUP  &kp PGDN &kp END &none  &none &none             &none  &none &kp N_CLBW &kp N_OLBW &kp N_PBWS &kp N_NBWS &kp N_NEBW &none
                         &none &none &none  &none &none                        &none  &kp ESC &none &none &none
