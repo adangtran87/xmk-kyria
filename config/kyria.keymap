@@ -175,7 +175,7 @@
     };
     navigation_layer {
       bindings = <
-  &none  &none   &none  &M2(LEFT) &M2(RIGHT) &none                                       &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
+  &none  &none   &none  &kp M2(LEFT) &kp M2(RIGHT) &none                                &kp M2(H) &kp M2(J) &kp M2(K) &kp M2(L) &none &none
   &none  &kp OSX_MCL   &kp OSX_SS  &kp M1(J) &kp M1(K) &none                             &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
   &none  &kp HOME   &kp PGUP  &kp PGDN &kp END &none  &none &none             &none  &none &kp N_CLBW &kp N_OLBW &kp N_PBWS &kp N_NBWS &kp N_NEBW &none
                         &none &none &none  &none &none                        &none  &kp ESC &none &none &none
