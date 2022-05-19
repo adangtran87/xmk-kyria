@@ -139,7 +139,7 @@
     ZMK_MACRO(m_cfunc,
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp LBRC &kp RET &kp RBRC &kp LEFT &kp RET &kp UP>;
+      bindings = <&kp LBRC &kp RET &kp RBRC &kp LEFT &kp RET &kp UP &kp TAB>;
     )
     ZMK_MACRO(m_paren,
       wait-ms = <30>;
