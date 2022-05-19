@@ -125,7 +125,7 @@
       };
       combo_semicolon {
           timeout-ms = <50>;
-          key-positions = <23 35>;
+          key-positions = <20 35>;
           bindings = <&kp SEMI>;
       };
   };
