@@ -136,6 +136,16 @@
       tap-ms = <30>;
       bindings = <&kp N0 &kp X>;
     )
+    ZMK_MACRO(m_cfunc,
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LBRC &kp ENT &kp RBRC &kp LEFT &kp ENT &kp UP>;
+    )
+    ZMK_MACRO(m_paren,
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+    )
   };
 
   behaviors {
@@ -206,7 +216,7 @@
     };
     symbol_layer {
       bindings = <
-  &none  &none   &none  &none &none &none                                                      &kp AMPS &kp ASTRK &kp LBKT &kp RBKT &kp PLUS &none
+  &none  &none   &none  &m_paren &m_cfunc &none                                                      &kp AMPS &kp ASTRK &kp LBKT &kp RBKT &kp PLUS &none
   &none  &kp EXCL &kp LPAR  &kp RPAR &kp QMARK &kp TILDE                                       &kp PIPE &kp EQUAL &kp LBRC &kp RBRC &kp SEMI &none
   &none  &kp CARET &kp GRAVE &kp HASH &kp DLLR &none  &none &none                 &none  &none &kp AT   &kp PRCNT &kp LT   &kp GT   &kp BSLH &none
                         &none &none &kp DEL &kp BSPC &none                        &none  &none &none &none &none
