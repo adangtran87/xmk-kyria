@@ -91,7 +91,7 @@ combo_tab {
 };
 combo_stab {
   bindings = <&kp LS(TAB)>;
-  key-positions = <22 23>;
+  key-positions = <23 24>;
   timeout-ms = <TIMEOUT_DEFAULT>;
   layers = <BASE>;
 };
